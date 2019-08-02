@@ -1,15 +1,6 @@
 <template>
   <div class="home row">
-    <b-col lg="4">
-      <div class="affix color-half">
-        <b-col lg="9" sm="12" class="mx-auto">
-          <p class="intro-text">
-            Op deze pagina vindt je
-            <strong>mijn reflectie verslag.</strong>
-          </p>
-        </b-col>
-      </div>
-    </b-col>
+    <Sidebar sideBarColor="#005aff" introText="On this page you will" strongText="get to know me."/>
     <b-col lg="8">
       <b-col id="about" lg="8" sm="12" class="mx-auto">
         <h3 class="introduction">
@@ -48,7 +39,9 @@
           <hr align="left" />
           <p>
             I mostly work with
-            <strong>VueJS and Laravel</strong> to build my fullstack applications. When I'm designing I use
+            <strong>VueJS and Laravel</strong> to build my fullstack applications. But I also have experience with
+            <strong>ReactJS</strong> and
+            <strong>NodeJS</strong>. When I'm designing I use
             <strong>Adobe XD</strong> or
             <strong>Sketch</strong>, I love building good looking webapps and apps.
           </p>
@@ -68,10 +61,12 @@
 
 <script>
 // @ is an alias to /src
+import Sidebar from '@/components/Sidebar'
 
 export default {
-  name: "myWork",
-  components: {}
+  components: {
+    Sidebar
+  }
 };
 </script>
 
@@ -105,7 +100,7 @@ export default {
   .introduction {
     margin-bottom: 20px;
   }
-  .paragraph{
+  .paragraph {
     margin: 25px 0 25px 0;
   }
 }

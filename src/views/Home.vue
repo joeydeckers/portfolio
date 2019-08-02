@@ -1,11 +1,12 @@
 <template>
   <div class="home row">
-    <div class="col-md-5 color-half">
+    <!-- <div class="col-md-4 color-half">
       <div class="col-md-9 mx-auto">
-        <p class="intro-text"><strong>Welkom</strong> op mijn portfolio hier staat het werk op waar ik trots op ben, neem gerust een kijkje.</p>
+        <p class="intro-text"><strong>Welcome</strong> on my portfolio! Here I will show you work which I'm most proud of. You will also get to know me! </p>
       </div>
-    </div>
-    <div class="col-md-7">
+    </div> -->
+    <Sidebar sideBarColor="#F00F39" strongText="fullstack webdeveloper." introText="Hi there my name is Joey Deckers and I'm a"/>
+    <div class="col-md-8">
       <img class="profile-picture" src="./../assets/joey.jpg" alt="">
     </div>
   </div>
@@ -13,10 +14,12 @@
 
 <script>
 // @ is an alias to /src
+import Sidebar from '@/components/Sidebar'
 
 export default {
   name: 'home',
   components: {
+    Sidebar
   }
 }
 </script>
@@ -31,13 +34,12 @@ export default {
   }
   .color-half{
     position: relative;
-    top: -55px;
     height: 100vh;
-    background: #F00F39;
+    // background: #F00F39;
   }
   .profile-picture{
     display: block;
-    margin: 130px auto;
+    margin: 220px auto;
     border-radius: 50%;
     width: 350px;
   }

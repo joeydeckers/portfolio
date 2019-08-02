@@ -1,10 +1,6 @@
 <template>
   <div class="home row">
-    <div class="col-md-5 color-half">
-      <div class="col-md-9 mx-auto">
-        <p class="intro-text">Op deze pagina vindt je  <strong> mijn werk van Media.</strong></p>
-      </div>
-    </div>
+    <Sidebar sideBarColor="#8C14FC" introText="On this page you will find " strongText="my work."/>
     <div class="col-md-7">
       <div id="about" class="col-md-10 mx-auto">
         <h3><strong>Mijn werk</strong></h3>
@@ -42,10 +38,12 @@
 
 <script>
 // @ is an alias to /src
+import Sidebar from '@/components/Sidebar'
 
 export default {
   name: 'home',
   components: {
+    Sidebar
   },
   data() {                                
       return {

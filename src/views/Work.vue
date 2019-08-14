@@ -1,30 +1,46 @@
 <template>
-  <div class="home row">
-    <div class="col-md-5 color-half">
-      <div class="col-md-9 mx-auto">
-        <p class="intro-text">Op deze pagina vindt je  <strong> mijn reflectie verslag.</strong></p>
+  <keep-alive>
+    <div class="home row">
+      <div class="col-md-5 color-half">
+        <div class="col-md-9 mx-auto">
+          <p class="intro-text">Op deze pagina vindt je  <strong> mijn reflectie verslag.</strong></p>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div id="about" class="col-md-10 mx-auto">
+          <h3><strong>{{name}}</strong></h3>
+          {{getInfo}}
+        </div>
       </div>
     </div>
-    <div class="col-md-7">
-      <div id="about" class="col-md-10 mx-auto">
-        <h3><strong>{{name}}</strong></h3>
-        {{text}}
-      </div>
-    </div>
-  </div>
+  </keep-alive>
 </template>
 
 <script>
 // @ is an alias to /src
 
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
+    data(){
+      return{
+        projectName : ""
+      }
+    },
     props:[
         "text",
         "name"
     ],
     name: 'myWork',
-    components: {
-  },
+    components: {},
+    computed:{
+      getInfo(){
+        return this.$store.getters.item(this.projectName)
+      }
+    },
+    created(){
+      this.projectName = this.name;
+    }
 
 }
 </script>

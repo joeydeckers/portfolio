@@ -30,12 +30,12 @@ export default new Router({
       component: About
     },
     {
-      path: '/mijn-werk',
+      path: '/mijn-werk/',
       name: 'MyWork',
       component: MyWork
     },
     {
-      path: '/mijn_werk/opdracht',
+      path: '/mijn-werk/:name',
       name: 'work',
       component: Work,
       props: true

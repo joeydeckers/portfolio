@@ -7,22 +7,9 @@
         <p>Hier kan je mijn werk vinden.</p>
         <div class="row ">
             <div class="col-md-6" v-for="myWork in myWorks" :key = myWork.id>
-                 <router-link :to="{ name: 'work', params: { text: myWork.text, name: myWork.name } }">
-                     {{myWork.name}}
+                 <router-link :to="{ name: 'work', params: { text: myWork.text, name: myWork.name.toLowerCase() } }">
+                     {{myWork.name}} 
                  </router-link>
-
-                  <!-- <router-link :to = myWork.url>
-                     {{myWork.name}}
-                 </router-link> -->
-            </div>
-            <div class="col-md-6"> 
-                 <!-- <router-link :to="{ name: 'work', params: { text: myWork.text, name: myWork.name } }">
-                     {{myWork.name}}
-                 </router-link> -->
-
-                  <!-- <router-link :to = myWork.url>
-                     {{myWork.name}}
-                 </router-link> -->
             </div>
         </div>
       </div>
@@ -43,8 +30,8 @@ export default {
       return {
         myWorks:[
           {
-            name: 'Media week 1',
-            url: '/mijn_werk/week1',
+            name: 'FitFood',
+            url: '/mijn-werk/fitfood',
             text: 'Als eerste opdracht heb ik een digital footprint gemaakt van een klasgenoot. Ook heeft iemand anders over mij een beeld proberen te krijgen door mijn digital footprint. Het kwam niet helemaal overeen met de persoon wie ik was, het vertelde meer over mijn loopbaan. Wat je vaak op internet ziet van mensen is een fractie van hoe ze echt zijn. Dat is de indruk die ik van deze opdracht heb gekegen. Privacy is het recht om bepaalde elementen van je leven voor jezelf te houden.'
           },
           {

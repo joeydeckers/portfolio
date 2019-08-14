@@ -9,7 +9,7 @@
       <b-navbar-nav class="ml-auto">
         <b-nav-item to="/">Home</b-nav-item>
         <b-nav-item to="/about">About me</b-nav-item>
-        <b-nav-item to="/mijn_werk">My work</b-nav-item>
+        <b-nav-item to="/mijn-werk">My work</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>

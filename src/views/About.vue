@@ -6,7 +6,7 @@
         <h3 class="introduction">
           <strong>About me</strong>
         </h3>
-        <hr align="left" />
+        <hr align="left" /> 
         <div class="paragraph">
           <h5>
             <strong>Introduction</strong>

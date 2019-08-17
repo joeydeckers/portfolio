@@ -1,5 +1,5 @@
 <template>
-  <button class="btn btn-primary" :style="{background:btnColor}">
+  <button class="btn btn-primary btn-custom" :style="{background:btnColor}">
       <a :href="link" target="blank">{{text}}</a>
     </button>
 </template>
@@ -15,12 +15,16 @@ export default {
 </script>
 
 <style lang="scss">
-    .btn{
-        display: block;
+    .btn-custom{
+        display: block !important;
+        margin: 20px 0;
+        border-color: transparent !important;
+        padding: 10px 25px !important;
         a{
             color: #fff;
             &:hover{
                 text-decoration: none;
+                color: #fff
             }
         }
     }

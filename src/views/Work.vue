@@ -7,13 +7,13 @@
           <div id="about">
             <carousel id="carousel" :perPage=1>
               <slide v-for="picture in getInfo[0].pictures" :key="picture.key">
-                 <img :src="picture" alt="">
+                 <img :src="picture" alt="afbeelding_project">
               </slide>
             </carousel> 
             <div>
               <h3><strong> {{getInfo[0].title}}</strong></h3>
-              {{getInfo[0].text}}
-              <Button text="Bekijk api op github" :link="getInfo[0].link" btnColor="#8C14FC"/>
+              <p>{{getInfo[0].text}}</p>
+              <Button v-for="button in getInfo[0].projectButtons" :key="button.id" :text="button.buttonText" :link="button.buttonLink" btnColor="#8C14FC"/>
             </div>
           </div>
         </b-col>

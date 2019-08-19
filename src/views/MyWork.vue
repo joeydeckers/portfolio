@@ -1,25 +1,32 @@
 <template>
   <div class="home row">
-    <Sidebar sideBarColor="#8C14FC" introText="On this page you will find " strongText="my work."/>
-    <div class="col-md-7">
-      <div id="about" class="col-md-10 mx-auto">
-        <h3><strong>Mijn werk</strong></h3>
-        <p>Hier kan je mijn werk vinden.</p>
-        <div class="row ">
+    <Sidebar sideBarColor="#8C14FC" introText="Op deze pagina vind je " strongText="mijn werk."/>
+    <b-col lg="8" sm="12">
+      <b-col  lg="8" sm="12" class="mx-auto">
+        <div id="work">
+          <h3><strong>Mijn werk</strong></h3>
+          <p>Hier kan je mijn werk vinden.</p>
+          <div class="row ">
             <div class="col-md-6" v-for="myWork in myWorks" :key = myWork.id>
-                 <router-link :to="{ name: 'work', params: { name: myWork.name.toLowerCase()} }">
-                     {{myWork.name}} 
-                 </router-link>
+              <router-link :to="{ name: 'work', params: { name: myWork.name.toLowerCase()} }">
+                  {{myWork.name}}  
+              </router-link>
             </div>
+            <div v-for="item in getAllProjects" :key="item.id">
+             {{item.name}}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </b-col>
+    </b-col>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Sidebar from '@/components/Sidebar'
+import { mapGetters, mapActions } from 'vuex'
+
 
 export default {
   name: 'home',
@@ -30,7 +37,6 @@ export default {
       return {
         myWorks:[
           {
-            id: 1,
             name: 'FitFood',
           },
           {
@@ -59,7 +65,12 @@ export default {
           }
         ]
       }
-    }
+    },
+    computed:{
+      getAllProjects(){
+        return this.$store.getters.getAllProjects;
+      } 
+    },
 }
 </script>
 
@@ -83,7 +94,7 @@ export default {
     border-radius: 50%;
     width: 350px;
   }
-  #about{
+  #work{
     position: relative;
     top: 190px;
     .col-md-6{

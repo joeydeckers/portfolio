@@ -18,7 +18,7 @@ export default new Router({
       component: Home
     },
     {
-      path: '/about',
+      path: '/over-mij',
       name: 'about',
       component: About
     },

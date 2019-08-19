@@ -1,58 +1,50 @@
 <template>
   <div class="home row">
-    <Sidebar sideBarColor="#005aff" introText="On this page you will" strongText="get to know me."/>
+    <Sidebar sideBarColor="#005aff" introText="Op deze pagina" strongText="leer je mij kennen."/>
     <b-col lg="8">
       <b-col id="about" lg="8" sm="12" class="mx-auto">
         <h3 class="introduction">
-          <strong>About me</strong>
+          <strong>Over mij</strong>
         </h3>
         <hr align="left" /> 
         <div class="paragraph">
           <h5>
-            <strong>Introduction</strong>
+            <strong>Introductie</strong>
           </h5>
           <p>
-            Hi there! I'm Joey Deckers I'm a
+            Hallo daar! Mijn naam is Joey Deckers en ik ben een
             <strong>fullstack developer</strong>
-            based in the Netherlands. I started programming when I was 15 years old, it started with creating simple games but later I decided to shift my focus towards webdevelopment. When I'm not busy with coding I'm mostly busy with designing my applications. I am currently studying Software Engineering at Fontys University of Applied Sciences in the Netherlands.
+            Ik ben begonnen met programmeren toen ik 15 jaar was, het begon met simpele games wat is uitgegroeid naar passie voor programmeren. Momenteel volg ik die studie HBO-ICT met de specialisatie Software Engineering. Deze studie volg ik aan de Fontys in Eindhoven.
           </p>
         </div>
 
         <div class="paragraph">
           <h5>
-            <strong>My experience</strong>
+            <strong>Mijn ervaring</strong>
           </h5>
           <hr align="left" />
           <p>
-            I worked for established companies in the dutch tech industry but also for small startup companies. In 2019 I decided to start my own company called
-            <a
-              target="blank"
-              href="https://pivoxa.com"
-            >Pivoxa.</a> My company focusses on creating websites, webapps and apps.
+            Ik heb gewerkt voor verschillende bedrijven in de Nederlands ICT wereld, hier heb ik veel geleerd met betrekking tot het maken van Wordpress websites tot aan complexe webapplicaties. Hierdoor heb ik ruime werkervaring verkregen met betrekking tot programmeren.
           </p>
         </div>
 
         <div class="paragraph">
           <h5>
-            <strong>My skillset</strong>
+            <strong>Mijn skillset</strong>
           </h5>
           <hr align="left" />
           <p>
-            I mostly work with
-            <strong>VueJS and Laravel</strong> to build my fullstack applications. But I also have experience with
-            <strong>ReactJS</strong> and
-            <strong>NodeJS</strong>. When I'm designing I use
-            <strong>Adobe XD</strong> or
-            <strong>Sketch</strong>, I love building good looking webapps and apps.
+            Ik werk voornamelijk met
+            <strong>VueJS en Laravel</strong> om mijn fullstack applicaties te realiseren. Om een betere structuur van mijn projecten te hebben gebruik ik <strong>Vuex</strong> wanneer dat nodig is. Wanneer ik niet aan het programmeren ben design ik ook graag mijn applicaties, hiervoor gebruik ik <strong>Sketch </strong> of <strong>Adobe XD</strong>.
           </p>
         </div>
 
         <div class="paragraph">
           <h5>
-            <strong>My resume</strong>
+            <strong>Mijn CV</strong>
           </h5>
           <hr align="left" />
-          <button>Resume</button>
+          <Button text="Klik hier voor mijn CV" link="/" btnColor="#005aff"/>
         </div>
       </b-col>
     </b-col>
@@ -62,10 +54,12 @@
 <script>
 // @ is an alias to /src
 import Sidebar from '@/components/Sidebar'
+import Button from '@/components/Button'
 
 export default {
   components: {
-    Sidebar
+    Sidebar,
+    Button
   }
 };
 </script>

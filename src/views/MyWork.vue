@@ -9,7 +9,7 @@
           <div class="row ">
             <b-col lg="6" v-for="item in getAllProjects" :key="item.id">
               <router-link :to="{ name: 'work', params: { name: item.name.toLowerCase()} }">
-                <img src="https://via.placeholder.com/150" alt="portfolio item">
+                <img :src="item.pictures[0]" alt="afbeelding_project">
                 {{item.name}}
               </router-link>
             </b-col>

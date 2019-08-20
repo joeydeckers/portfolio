@@ -43,9 +43,6 @@
   @media screen and (max-width: 1440px){
     width: 450px;
   }
-  @media screen and (max-width: 1440px){
-    width: 311px;
-  }
   @media screen and(max-width: 768px) {
     position: static;
     width: 100%;

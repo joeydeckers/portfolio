@@ -7,14 +7,12 @@
           <h3><strong>Mijn werk</strong></h3>
           <p>Hier kan je mijn werk vinden.</p>
           <div class="row ">
-            <div class="col-md-6" v-for="myWork in myWorks" :key = myWork.id>
-              <router-link :to="{ name: 'work', params: { name: myWork.name.toLowerCase()} }">
-                  {{myWork.name}}  
+            <b-col lg="6" v-for="item in getAllProjects" :key="item.id">
+              <router-link :to="{ name: 'work', params: { name: item.name.toLowerCase()} }">
+                <img src="https://via.placeholder.com/150" alt="portfolio item">
+                {{item.name}}
               </router-link>
-            </div>
-            <div v-for="item in getAllProjects" :key="item.id">
-             {{item.name}}
-            </div>
+            </b-col>
           </div>
         </div>
       </b-col>
